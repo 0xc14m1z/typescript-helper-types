@@ -1,1 +1,6 @@
-export type Nullable<T> = T | null;
+import { PlainObject } from "./PlainObject";
+
+/**
+ * Alias for `Type | null`.
+ */
+export type Nullable<Type> = Type | null;

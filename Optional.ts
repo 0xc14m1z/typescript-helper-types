@@ -1,3 +1,6 @@
-import type { Nullable } from './Nullable';
+import type { Nullable } from "./Nullable";
 
-export type Optional<T> = Nullable<T> | undefined;
+/**
+ * Alias for `Type | null | undefined`.
+ */
+export type Optional<Type> = Nullable<Type> | undefined;
