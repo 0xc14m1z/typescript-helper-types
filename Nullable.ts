@@ -1,5 +1,3 @@
-import { PlainObject } from "./PlainObject";
-
 /**
  * Alias for `Type | null`.
  */
