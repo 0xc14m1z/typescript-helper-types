@@ -108,6 +108,23 @@ const A3: RectangleArea = (base: number, height: string) => base + height;
 //       Type 'number' is not assignable to type 'string'.(2322)
 ```
 
+#### `FindInUnion<Union, Property, Value>`
+
+Returns the element of a union `Union` joined by a property `Property` with
+value `Value` or never.
+
+```typescript
+type FiscalIds =
+  | { country: "usa", socialSecurityNumber: string }
+  | { country: "italy", fiscalCode: string }
+  | { country: "switzerland", swissId: string }
+
+FindInUnion<FiscalIds, "country", "usa"> === {
+  country: "usa",
+  socialSecurityNumber: string
+}
+```
+
 #### `Never<Type>`
 
 Constructs a type with all the properties of `Type` set to `never`.
